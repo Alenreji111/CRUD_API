@@ -9,6 +9,7 @@ const getProducts = async (req,res)=>{
       }
 
 }
+
 const getProduct = async (req,res)=>{
     try {
         const { id } = req.params
@@ -64,7 +65,7 @@ const deleteProducts = async (req,res)=>{
 module.exports = { 
     getProducts ,
     getProduct,
-    postProducts,//Or createProduct
-    putProduct,//Or updateProduct
+    postProducts,//*Or createProduct
+    putProduct,//*Or updateProduct
     deleteProducts
 }
