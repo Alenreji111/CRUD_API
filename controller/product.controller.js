@@ -1,4 +1,6 @@
 const Product = require("../model/product.model.js")
+const {productlist} = require("../dto/product.dto.js")
+
 
 const getProducts = async (req,res)=>{
     try{
@@ -26,8 +28,7 @@ const postProducts =async (req,res)=>{
     try {
 
         const product = await Product.create(req.body)
-        res.status(201).json(product)
-    
+        res.status(201).json(new productlist(product.Name,product.quantity,product.price))
     
       } catch (error) {
         console.log(error)

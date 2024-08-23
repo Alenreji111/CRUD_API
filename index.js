@@ -20,15 +20,15 @@ mongoose.connect('mongodb+srv://alenreji100:m3vaHgEjuUTQtNlc@cluster0.fzbhc.mong
   })
 
   //router
+
 const productrouter = require("./router/product.router.js")
 app.use("/api/products",productrouter)
 const userrouter =require('./router/user.router.js')
-app.use("/user/userregister",userrouter)
+app.use("/user/userregisters",userrouter)
 
 
 app.get("/", (req, res) => {
   res.send("hello its node js")
-  // console.log("working or not")
 })
 
 
